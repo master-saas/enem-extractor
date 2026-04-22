@@ -1,7 +1,7 @@
 import argparse
 import os
 from parser.extractor import extract_all
-from parser.transformer import build_output, set_verbose
+from parser.transformer import build_output, set_verbose, BASE_DIR
 from parser.utils import zip_output
 
 def main():
@@ -15,8 +15,10 @@ def main():
 
     set_verbose(args.verbose)
 
+    img_output_dir = os.path.join(BASE_DIR, "images")
+
     print("Extracting PDF data...")
-    data = extract_all(args.input)
+    data = extract_all(args.input, img_output_dir)
 
     print("Converting to ENEM structure...")
     output_dir = build_output(data)

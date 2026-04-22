@@ -50,11 +50,15 @@ output/
 │   ├── details.json          # Index with all questions, disciplines, languages
 │   └── questions/
 │       ├── 1-ingles/
-│       │   └── details.json
+│       │   ├── details.json
+│       │   └── image-1.png
 │       ├── 1-espanhol/
-│       │   └── details.json
-│       ├── 2/
-│       │   └── details.json
+│       │   ├── details.json
+│       │   └── image-1.png
+│       ├── 14/
+│       │   ├── details.json
+│       │   ├── image-1.png
+│       │   └── image-2.png
 │       ...
 ```
 
@@ -62,18 +66,18 @@ output/
 
 ```json
 {
-  "title": "Questão 1 - ENEM 2024",
-  "index": 1,
+  "title": "Questão 14 - ENEM 2024",
+  "index": 14,
   "year": 2024,
-  "language": "ingles" | "espanhol" | null,
-  "discipline": "linguagens" | "ciencias-humanas" | "ciencias-natureza" | "matematica",
-  "context": "Question text with images marked as ![](img)",
-  "files": ["![](img)"],
-  "correctAlternative": "A",
-  "alternativesIntroduction": "Intro text before alternatives",
+  "language": null,
+  "discipline": "linguagens",
+  "context": "Question text...\n\n![](image-1.png)\n\n![](image-2.png)",
+  "files": ["image-1.png", "image-2.png"],
+  "correctAlternative": "B",
+  "alternativesIntroduction": "De acordo com esse texto, o aplicativo Linklado contribuiu\npara a",
   "alternatives": [
-    {"letter": "A", "text": "...", "file": null, "isCorrect": true},
-    {"letter": "B", "text": "...", "file": null, "isCorrect": false},
+    {"letter": "A", "text": "...", "file": null, "isCorrect": false},
+    {"letter": "B", "text": "...", "file": null, "isCorrect": true},
     ...
   ]
 }

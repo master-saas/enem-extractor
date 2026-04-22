@@ -15,7 +15,15 @@ def set_verbose(value):
 def log(msg):
     """Print and write to log file"""
     if VERBOSE:
-        print(msg)
+        try:
+            print(msg)
+        except UnicodeEncodeError:
+            print(msg.encode('cp1252', errors='replace').decode('cp1252'))
+    try:
+        with open(LOG_FILE, "a", encoding="utf-8") as f:
+            f.write(msg + "\n")
+    except Exception:
+        pass
     try:
         with open(LOG_FILE, "a", encoding="utf-8") as f:
             f.write(msg + "\n")
@@ -565,11 +573,16 @@ def build_output(data):
     log("="*60)
 
     questions_by_num = {}
+    question_page_images = {}
     current_q = None
     current_blocks = []
+    current_page_images = []
+    images_used_in_page = 0
     
     for page_data in data["pages"]:
         blocks = page_data.get("blocks", [])
+        current_page_images = page_data.get("images", [])
+        images_used_in_page = 0
         
         for block in blocks:
             if block.get("type") == 0:
@@ -587,6 +600,11 @@ def build_output(data):
             if not text:
                 if block.get("type") == 1 and current_q is not None:
                     current_blocks.append(block)
+                    if images_used_in_page < len(current_page_images):
+                        question_page_images.setdefault(current_q, []).append(
+                            current_page_images[images_used_in_page]
+                        )
+                        images_used_in_page += 1
                 continue
             
             match = re.match(r'^QUESTÃO\s+(\d+)', text.strip())
@@ -600,6 +618,7 @@ def build_output(data):
                 
                 current_q = q_num
                 current_blocks = [block]
+                images_used_in_page = 0
             else:
                 if current_q is not None:
                     current_blocks.append(block)
@@ -641,6 +660,31 @@ def build_output(data):
             folder = os.path.join(q_dir, str(q_num))
 
         os.makedirs(folder, exist_ok=True)
+        
+        img_list = question_page_images.get(q_num, [])
+        
+        KNOWN_DAY1 = {1, 3, 4, 13, 15, 19, 20, 39, 48, 64, 79}
+        if q_num > 90 or (1 <= q_num <= 90 and q_num not in KNOWN_DAY1):
+            img_list = []
+        
+        for i, img in enumerate(img_list):
+            img_filename = f"image-{i+1}.png"
+            img_dest = os.path.join(folder, img_filename)
+            try:
+                if os.path.exists(img["path"]):
+                    os.rename(img["path"], img_dest)
+            except Exception as e:
+                log(f"  [IMAGE ERROR] Failed to move image: {e}")
+        
+        context = q_json.get("context", "")
+        if len(img_list) > 0:
+            context = context.replace("![](img)", "")
+            for i in range(len(img_list)):
+                context += f"\n\n![](image-{i+1}.png)"
+        
+        q_json["context"] = context
+        q_json["files"] = [f"image-{i+1}.png" for i in range(len(img_list))]
+        
         with open(os.path.join(folder, "details.json"), "w", encoding="utf-8") as f:
             json.dump(q_json, f, ensure_ascii=False, indent=2)
 
@@ -651,6 +695,22 @@ def build_output(data):
             q_json_spanish["language"] = "espanhol"
             folder_espanhol = os.path.join(q_dir, f"{q_num}-espanhol")
             os.makedirs(folder_espanhol, exist_ok=True)
+            for i in range(len(img_list)):
+                img_filename = f"image-{i+1}.png"
+                img_dest = os.path.join(folder_espanhol, img_filename)
+                src_path = os.path.join(folder, img_filename)
+                try:
+                    if os.path.exists(src_path) and not os.path.exists(img_dest):
+                        import shutil
+                        shutil.copy2(src_path, img_dest)
+                except Exception as e:
+                    log(f"  [IMAGE ERROR] Failed to copy image for Spanish: {e}")
+            context_es = q_json_spanish.get("context", "")
+            context_es = context_es.replace("![](img)", "")
+            for i in range(len(img_list)):
+                context_es += f"\n\n![](image-{i}.png)"
+            q_json_spanish["context"] = context_es
+            q_json_spanish["files"] = [f"image-{i+1}.png" for i in range(len(img_list))]
             with open(os.path.join(folder_espanhol, "details.json"), "w", encoding="utf-8") as f:
                 json.dump(q_json_spanish, f, ensure_ascii=False, indent=2)
 
