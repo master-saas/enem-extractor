@@ -1,0 +1,72 @@
+=== PAGE 3 ===
+Block 0: bbox=[29.8, 750.4, 544.0, 759.4]
+--- Content ---
+CIÊNCIAS DA NATUREZA E SUAS TECNOLOGIAS | 2º DIA | CADERNO 5 | AMARELO
+4
+---------------
+Block 2: bbox=[29.8, 79.4, 97.9, 90.4]
+--- Content ---
+Questão 101 
+---------------
+Block 3: bbox=[29.8, 96.4, 283.3, 287.8]
+--- Content ---
+A icterícia é uma doença que acomete recém-nascidos e 
+pode ser tratada com um método de fototerapia conhecido como 
+banho de luz, que consiste na exposição do recém-nascido a uma 
+fonte luminosa equipada com LEDs azuis. Para o monitoramento 
+da dosagem dessa radiação, é utilizada a resposta óptica de um 
+sensor constituído de materiais orgânicos que luminescem quando 
+expostos à luz azul. Com o passar do tempo, essa radiação oxida os 
+materiais do sensor, alterando sua coloração de vermelho-laranja 
+para verde, o que indica o final do tratamento.
+O gráfico apresenta o espectro de fotoluminescência do sensor 
+em função do comprimento de onda da luz emitida no início do 
+tratamento, quando o sensor, colado na fralda do bebê (Figura 1),  
+luminesce na região do vermelho-laranja (∼600 nm). A Figura 2  
+apresenta a evolução da coloração do sensor, mostrando que a 
+frequência da luz emitida por ele aumenta em função do tempo de 
+exposição à luz azul.
+---------------
+Block 5: bbox=[50.1, 691.4, 282.8, 718.6]
+--- Content ---
+SILVA, M. M. et al. Fabricação de sensor orgânico flexível para aplicação  
+em terapia com luz azul. tecnol. Metal. Mater. Miner.,  
+n. 3, jul.-set. 2011 (adaptado).
+---------------
+Block 6: bbox=[293.0, 79.4, 546.4, 101.4]
+--- Content ---
+Os espectros de fotoluminescência do sensor no início e no final 
+do tratamento estão esboçados no gráfico:
+---------------
+Block 7: bbox=[293.0, 164.9, 305.5, 174.9]
+--- Content ---
+A 
+---------------
+Block 9: bbox=[293.0, 291.6, 305.5, 301.6]
+--- Content ---
+B 
+---------------
+Block 11: bbox=[293.0, 418.2, 305.5, 428.2]
+--- Content ---
+C 
+---------------
+Block 13: bbox=[293.0, 544.8, 305.5, 554.8]
+--- Content ---
+D 
+---------------
+Block 15: bbox=[293.0, 671.5, 305.5, 681.5]
+--- Content ---
+E 
+---------------
+Block 17: bbox=[31.2, 34.9, 136.6, 55.8]
+--- Content ---
+*020125AM4*
+---------------
+Block 18: bbox=[170.9, 744.5, 543.8, 746.5]
+--- Content ---
+ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEN2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025
+---------------
+Block 19: bbox=[30.3, 69.8, 403.2, 71.9]
+--- Content ---
+ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEN2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025ENEM2025
+---------------

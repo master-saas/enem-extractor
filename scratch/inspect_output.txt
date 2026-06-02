@@ -1,0 +1,110 @@
+
+=== INSPECTING Q164 IN input/2025_PV_impresso_D2_CD5.pdf ===
+Block 0: bbox=[293.0, 79.4, 361.1, 90.4] Type=0
+--- Content ---
+QUESTãO 164
+---------------
+Block 1: bbox=[293.0, 96.4, 546.5, 178.7] Type=0
+--- Content ---
+O cortisol é um hormônio produzido pelas glândulas 
+adrenais e pode ser considerado um importante marcador 
+do estresse fisiológico. Em um estudo desenvolvido com 
+enfermeiros, foi verificado que a concentração de cortisol 
+salivar em um dia de trabalho, denotada por T, era, em média, 
+1,59 vezes a concentração de cortisol salivar em um dia de 
+folga, denotada por F.
+---------------
+Block 2: bbox=[315.1, 182.7, 546.1, 200.4] Type=0
+--- Content ---
+ROCHA, M. C. P. et al. Estresse em enfermeiros: o uso do cortisol salivar no  
+dia de trabalho e de folga. Rev. Esc. Enferm. USP, n. 5, 2013 (adaptado).
+---------------
+Block 3: bbox=[293.0, 210.0, 475.1, 220.0] Type=0
+--- Content ---
+Nesse estudo, a relação obtida entre T e F foi
+---------------
+Block 4: bbox=[293.0, 225.2, 353.0, 251.2] Type=0
+--- Content ---
+A T = 1,59 + F
+B F = 1,59 + T
+---------------
+Block 5: bbox=[293.0, 252.5, 339.8, 279.8] Type=0
+--- Content ---
+C T
+F = 1 59
+,
+---------------
+Block 6: bbox=[293.0, 280.1, 339.8, 307.3] Type=0
+--- Content ---
+D F
+T = 1 59
+,
+---------------
+Block 7: bbox=[293.0, 307.2, 350.0, 319.7] Type=0
+--- Content ---
+E F ⋅ T = 1,59
+---------------
+
+=== INSPECTING Q169 IN input/2024_PV_impresso_D2_CD5.pdf ===
+Block 0: bbox=[32.0, 65.2, 109.1, 80.0] Type=0
+--- Content ---
+QUESTÃO 169
+---------------
+Block 1: bbox=[32.0, 82.9, 281.0, 118.3] Type=0
+--- Content ---
+Uma criança, utilizando um aplicativo, escreveu uma 
+mensagem para enviar a um amigo. Essa mensagem foi 
+escrita seguindo estas etapas:
+---------------
+Block 2: bbox=[78.6, 123.7, 252.2, 137.1] Type=0
+--- Content ---
+Etapas
+Visor de escrita
+---------------
+Block 3: bbox=[37.8, 139.2, 154.2, 174.2] Type=0
+--- Content ---
+1ª etapa: inseriu três fi guras 
+do tipo 
+ no visor de 
+escrita da mensagem;
+---------------
+Block 4: bbox=[37.8, 176.4, 154.2, 224.9] Type=0
+--- Content ---
+2ª etapa: copiou o que havia 
+inserido anteriormente e 
+colou (inseriu o que havia 
+copiado) ao lado;
+---------------
+Block 5: bbox=[37.8, 226.8, 154.2, 263.6] Type=0
+--- Content ---
+3ª etapa: copiou o que tinha 
+no visor na 2ª etapa e colou 
+ao lado.
+---------------
+Block 6: bbox=[32.0, 266.6, 281.1, 302.0] Type=0
+--- Content ---
+A criança seguiu copiando e colando, em cada etapa, 
+o que tinha no visor na etapa imediatamente anterior, até 
+concluir a 20ª etapa. Em seguida, enviou a mensagem.
+---------------
+Block 7: bbox=[32.0, 306.2, 278.1, 317.1] Type=0
+--- Content ---
+Qual foi o total de figuras contidas na mensagem enviada?
+---------------
+Block 8: bbox=[32.0, 320.5, 73.4, 333.9] Type=0
+--- Content ---
+A 3 × 219
+---------------
+Block 9: bbox=[32.0, 332.2, 73.4, 345.6] Type=0
+--- Content ---
+B 3 × 220
+---------------
+Block 10: bbox=[32.0, 343.9, 73.4, 357.3] Type=0
+--- Content ---
+C 3 × 221
+---------------
+Block 11: bbox=[32.0, 355.6, 89.6, 380.7] Type=0
+--- Content ---
+D 3 × 220 − 1
+E 3 × 220 − 3
+---------------
